@@ -3,6 +3,6 @@
 # version: 0.0.1
 # authors: Awesome Plugin Developer
 after_initialize do
-    Topic.register_custom_field_type(:import_id, :string)
-    add_to_serializer(:topic_view, :import_id) { object.topic.import_id }
+    Topic.register_custom_field_type('import_id', :string)
+    add_to_serializer(:topic_view, 'import_id') { object.topic.import_id }
 end
