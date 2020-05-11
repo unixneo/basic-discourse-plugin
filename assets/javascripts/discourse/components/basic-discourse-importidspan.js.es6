@@ -1,5 +1,4 @@
 import computed from "discourse-common/utils/decorators";
-import { withPluginApi } from "discourse/lib/plugin-api";
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
