@@ -9,7 +9,7 @@
 
 after_initialize do
     Topic.register_custom_field_type(:import_id, :text)
-    add_to_serializer(:topic_view, :import_id, false) do
-      object.topic.custom_fields['import_id'] 
-    end
+    add_to_serializer(:topic_view, :custom_fields, false) {
+    object.topic.custom_fields
+    }
 end
