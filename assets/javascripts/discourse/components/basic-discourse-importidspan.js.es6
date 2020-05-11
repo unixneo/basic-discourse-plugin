@@ -1,5 +1,5 @@
 import computed from "discourse-common/utils/decorators";
-import { htmlSafe } from "@ember/template";
+//import { htmlSafe } from "@ember/template";
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
@@ -15,18 +15,17 @@ export default Ember.Component.extend({
       legacyId = 0;
     }
     let mySpan = "";
+    let link = "";
     if (legacyId > 1) {
-      let link =
-        '<a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
+      link =
+        '<span class="import-id">Imported Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
         legacyId +
         '">' +
         legacyId +
-        "</a>";
-      let linkOut = htmlSafe(link);
-      mySpan = linkOut;
+        "</a></span>";
     } else {
-      mySpan = "Import Thread Id Not Found";
+      link = '<span class="import-id">Imported Thread ID: Not Found</span>';
     }
-    return mySpan;
+    return Ember.String.htmlSafe(link);
   },
 });
