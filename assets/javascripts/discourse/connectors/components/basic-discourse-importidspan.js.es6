@@ -7,6 +7,7 @@ export default Ember.Component.extend({
     //let cf_array = cf.import_id.split("_");
     //let cf_import_id = cf_array[1];
     let id = cf["import_id"];
+    console.log("bar ", id);
     return "1111111"; //when you do {{importId}} in the template of this component you will be able to access it.
   },
 });
