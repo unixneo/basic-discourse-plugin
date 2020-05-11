@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     //let cf_import_id = cf_array[1];
     //let id = cf["import_id"];
     //console.log("bar ", id);
-    let myArray = cf.split("_");
+    let myArray = cf.split("-");
     let legacyId = myArray[1];
     console.log("bar", legacyId);
     //let myjson = JSON.parse(myobj);
