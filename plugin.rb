@@ -8,7 +8,7 @@
 #  25 |   138187 | import_id | thread-33 | 2020-03-15 19:14:25.726726 | 2020-03-15 19:14:25.726726
 
 after_initialize do
-    Topic.register_custom_field_type(:import_id, :text)
+    #Topic.register_custom_field_type(:import_id, :text)
     add_to_serializer(:topic_view, :custom_fields, false) {
     object.topic.custom_fields
     }
