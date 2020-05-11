@@ -1,0 +1,3 @@
+plugins:
+  minimum_trust_level:
+    default: 10
