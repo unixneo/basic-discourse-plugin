@@ -13,6 +13,8 @@ export default Ember.Component.extend({
     } else {
       legacyId = 0;
     }
-    return legacyId;
+    let mySpan =
+      '<span class="import-id">This is the ID: ' + legacyId + "</span>";
+    return mySpan;
   },
 });
