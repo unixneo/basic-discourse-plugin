@@ -4,7 +4,8 @@ export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
     var currentUser = Discourse.User.current();
-    if (currentUser.trust_level > 3) {
+    console.log("hmmm", currentUser.trust_level);
+    if (parseInt(currentUser.trust_level) > 3) {
       let legacyId = "";
       if (typeof cf !== "undefined") {
         console.log("foo", cf);
@@ -28,6 +29,7 @@ export default Ember.Component.extend({
         //link = '<span class="category-name">Imported Thread ID: Not Found</span>';
         link = "";
       }
+
       return Ember.String.htmlSafe(link);
     } else {
       return "";
