@@ -1,8 +1,7 @@
-# name: import-id
+# name: basic-plugin
 # about: A super simple plugin to demonstrate how plugins work
 # version: 0.0.1
 # authors: Awesome Plugin Developer
-# url: https://github.com/unixneo/basic-discourse-plugin
 
 
 enabled_site_setting :import_id_enabled
