@@ -15,8 +15,7 @@ export default Ember.Component.extend({
     }
     let mySpan = "";
     if (legacyId > 1) {
-      mySpan =
-        '<span class="import-id">This is the ID: ' + legacyId + "</span>";
+      mySpan = legacyId;
     } else {
       mySpan = "Import Thread Id Not Found";
     }

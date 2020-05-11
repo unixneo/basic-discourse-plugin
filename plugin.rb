@@ -3,6 +3,7 @@
 # version: 0.0.1
 # authors: Awesome Plugin Developer
 
+register_asset "stylesheets/common/basic-import-id.scss"
 
 after_initialize do
     add_to_serializer(:topic_view, :custom_fields, false) {
