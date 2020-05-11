@@ -3,6 +3,8 @@ import computed from "discourse-common/utils/decorators";
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
+    var currentUser = Discourse.User.current();
+    console.log("hmmm", currentUser.trust_level);
     let legacyId = "";
     if (typeof cf !== "undefined") {
       console.log("foo", cf);
