@@ -18,7 +18,7 @@ export default Ember.Component.extend({
       mySpan =
         '<span class="import-id">This is the ID: ' + legacyId + "</span>";
     } else {
-      myspam = "Import Thread Id Not Found";
+      mySpan = "Import Thread Id Not Found";
     }
     return mySpan;
   },
