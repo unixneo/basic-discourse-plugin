@@ -4,6 +4,8 @@ export default {
   initialize() {
     withPluginApi("0.8", (api) => {
       api.onPageChange(() => console.log("user navigated!"));
+      let currentUser = api.getCurrentUser();
+      console.log("blah", currentUser);
     });
     //withPluginApi("0.8", initWithApi);
     //console.log("alert boxes are annoying!");
