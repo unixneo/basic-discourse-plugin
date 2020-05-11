@@ -1,4 +1,5 @@
 import computed from "discourse-common/utils/decorators";
+import { withPluginApi } from "discourse/lib/plugin-api";
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
@@ -15,7 +16,6 @@ export default Ember.Component.extend({
     } else {
       legacyId = 0;
     }
-    let mySpan = "";
     let link = "";
     if (legacyId > 1) {
       link =
@@ -25,7 +25,8 @@ export default Ember.Component.extend({
         legacyId +
         "</a></span>";
     } else {
-      link = '<span class="category-name">Imported Thread ID: Not Found</span>';
+      //link = '<span class="category-name">Imported Thread ID: Not Found</span>';
+      link = "";
     }
     return Ember.String.htmlSafe(link);
   },
