@@ -4,8 +4,6 @@
 # authors: Awesome Plugin Developer
 
 
-enabled_site_setting :import_id_enabled
-
 after_initialize do
     add_to_serializer(:topic_view, :custom_fields, false) {
     object.topic.custom_fields
