@@ -1,8 +1,9 @@
 import computed from "discourse-common/utils/decorators";
-//import { htmlSafe } from "@ember/template";
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
+    let currentUser = api.getCurrentUser();
+    console.log("blah", currentUser);
     let legacyId = "";
     if (typeof cf !== "undefined") {
       console.log("foo", cf);
@@ -18,13 +19,13 @@ export default Ember.Component.extend({
     let link = "";
     if (legacyId > 1) {
       link =
-        '<span class="import-id">Imported Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
+        '<span class="category-name">Imported Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
         legacyId +
         '">' +
         legacyId +
         "</a></span>";
     } else {
-      link = '<span class="import-id">Imported Thread ID: Not Found</span>';
+      link = '<span class="category-name">Imported Thread ID: Not Found</span>';
     }
     return Ember.String.htmlSafe(link);
   },
