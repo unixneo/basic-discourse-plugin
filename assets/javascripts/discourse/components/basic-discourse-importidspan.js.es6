@@ -13,8 +13,13 @@ export default Ember.Component.extend({
     } else {
       legacyId = 0;
     }
-    let mySpan =
-      '<span class="import-id">This is the ID: ' + legacyId + "</span>";
+    let mySpan = "";
+    if (legacyId > 1) {
+      mySpan =
+        '<span class="import-id">This is the ID: ' + legacyId + "</span>";
+    } else {
+      myspam = "Import Thread Id Not Found";
+    }
     return mySpan;
   },
 });
