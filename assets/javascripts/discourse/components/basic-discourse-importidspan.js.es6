@@ -17,7 +17,7 @@ export default Ember.Component.extend({
     let link = "";
     if (legacyId > 1) {
       link =
-        '<span class="category-name">Imported Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
+        '<span class="category-name import-id">Imported Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
         legacyId +
         '">' +
         legacyId +
