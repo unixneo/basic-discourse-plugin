@@ -1,6 +1,6 @@
 export default {
-  name: 'alert',
+  name: "alert",
   initialize() {
-    console.log('alert boxes are annoying!');
-  }
+    console.log("alert boxes are annoying!");
+  },
 };
