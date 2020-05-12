@@ -5,7 +5,8 @@
 # authors: Neo, spirobel
 # url: https://github.com/unixneo/basic-discourse-plugin
 
-enabled_site_setting :legacy_enabled
+# setting below does not work (yet)
+#enabled_site_setting :legacy_enabled
 
 register_asset "stylesheets/common/basic-import-id.scss"
 
