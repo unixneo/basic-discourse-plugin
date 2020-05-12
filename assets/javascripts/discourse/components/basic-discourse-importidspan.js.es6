@@ -1,11 +1,13 @@
 import computed from "discourse-common/utils/decorators";
 //import api from "discourse/lib/plugin-api";
+let min_trust_level = this.siteSettings.minimum_trust_level;
+console.log("mmm", min_trust_level);
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
     let currentUser = Discourse.User.current();
     let trustLevel = 0;
-    console.log("mmm", this.siteSettings.minimum_trust_level);
+    console.log("mmm2", min_trust_level);
     if (parseInt(this.siteSettings.minimum_trust_level) > 0) {
       trustLevel = parseInt(this.siteSettings.minimum_trust_level);
     } else {
