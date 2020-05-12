@@ -8,7 +8,7 @@
 
 This Discourse plugin adds:
 
-- The thread id of the correponponding legacy (migrated) forum next to the categories in a Discourse topic.
+- The thread id of the corresponding legacy (migrated) forum next to the categories in a Discourse topic.
 - A link to the legacy forum thread.
 - A site setting for the minimum trust level to view legacy info.
 
