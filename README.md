@@ -2,7 +2,9 @@
 
 ### version 0.0.1
 
-## Testing
+## Current Status
+
+### Live testing on https://community.unix.com/
 
 This Discourse plugin adds:
 
