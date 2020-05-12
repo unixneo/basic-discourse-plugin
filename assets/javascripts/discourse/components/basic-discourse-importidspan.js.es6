@@ -3,9 +3,15 @@ import computed from "discourse-common/utils/decorators";
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
-    var currentUser = Discourse.User.current();
+    let currentUser = Discourse.User.current();
+    let trustLevel = 0;
+    if (this.siteSettings.minimum_trust_level > 0) {
+      trustLevel = parseInt(this.siteSettings.minimum_trust_level);
+    } else {
+      trustLevel = 4;
+    }
     console.log("hmmm", currentUser.trust_level);
-    if (parseInt(currentUser.trust_level) > 3) {
+    if (parseInt(currentUser.trust_level) >= parseInt(trustLevel)) {
       let legacyId = "";
       if (typeof cf !== "undefined") {
         console.log("foo", cf);
