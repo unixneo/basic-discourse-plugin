@@ -1,6 +1,6 @@
 # legacy-info
 
-## version 0.0.1
+### version 0.0.1
 
 ## Testing
 
@@ -13,6 +13,8 @@ This Discourse plugin adds:
 ## TODO
 
 - The link to the legacy forum thread is hard coded into the component logic. This should be in a site setting. Anyone who wants to use this plugin now will need to clone it and manually change the code.
+
+- This is my first Discourse plugin. Please PR or post any suggested improvements. I'm sure this plugin needs a lot of work to match the expected quality of a Discourse plugin.
 
 See: https://community.unix.com/t/paid-gig-requirements-for-discourse-plugin-for-topic-serializer-api-v2/378385
 
