@@ -1,4 +1,4 @@
-# basic-discourse-plugin
+# legacy-forum-info
 
 ## Work-in-progress
 
