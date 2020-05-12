@@ -1,3 +1,4 @@
 plugins:
-  minimum_trust_level:
+  min_trust_level:
     default: 4
+    client: 4
