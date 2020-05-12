@@ -1,24 +1,18 @@
 import computed from "discourse-common/utils/decorators";
-//import api from "discourse/lib/plugin-api";
-//let min_trust_level = this.siteSettings.minimum_trust_level;
-//console.log("mmm", min_trust_level);
 export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
     let currentUser = Discourse.User.current();
     let min_trust_level_setting = Discourse.SiteSettings.min_trust_level;
     let trustLevel = parseInt(min_trust_level_setting);
-    console.log("mmm2", Discourse.SiteSettings);
     if (min_trust_level_setting > 0) {
       trustLevel = min_trust_level_setting;
     } else {
       trustLevel = 4;
     }
-    console.log("hmmm", currentUser.trust_level);
     if (parseInt(currentUser.trust_level) >= parseInt(trustLevel)) {
       let legacyId = "";
       if (typeof cf !== "undefined") {
-        console.log("foo", cf);
         let myArray = cf.split("-");
         let raw = myArray[1];
         if (parseInt(raw) > 0) {
