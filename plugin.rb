@@ -7,7 +7,7 @@
 # url: https://github.com/unixneo/basic-discourse-plugin
 
 #strangly, this breaks things
-enabled_site_setting:legacy_enabled
+#enabled_site_setting:legacy_enabled
 
 register_asset "stylesheets/common/basic-import-id.scss"
 
