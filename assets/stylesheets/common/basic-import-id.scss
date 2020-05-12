@@ -1,5 +1,8 @@
 .import-id {
   margin-left: 10px;
+  opacity: 0.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .import-id-link {
   text-decoration: none;
