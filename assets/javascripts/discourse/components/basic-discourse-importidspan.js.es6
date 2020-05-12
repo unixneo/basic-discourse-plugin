@@ -5,7 +5,8 @@ export default Ember.Component.extend({
   importId(cf) {
     let currentUser = Discourse.User.current();
     let trustLevel = 0;
-    if (this.siteSettings.minimum_trust_level > 0) {
+    console.log("mmm", this.siteSettings.minimum_trust_level);
+    if (parseInt(this.siteSettings.minimum_trust_level) > 0) {
       trustLevel = parseInt(this.siteSettings.minimum_trust_level);
     } else {
       trustLevel = 4;
