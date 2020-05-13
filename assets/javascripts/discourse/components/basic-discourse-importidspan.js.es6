@@ -5,6 +5,10 @@ export default Ember.Component.extend({
     let currentUser = Discourse.User.current();
     console.log("test current", Discourse.User.current());
     console.log("test discourse", Discourse);
+
+    if (Discourse.User.current() == null) {
+      console.log("current user is null or undefined");
+    }
     if (1 == 1) {
       return "";
     } else {
