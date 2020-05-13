@@ -3,7 +3,9 @@ export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
     let currentUser = Discourse.User.current();
-    if (typeof currentUser != "undefined") {
+    console.log("test current", Discourse.User.current());
+    console.log("test user", Discourse.User);
+    if (typeof currentUser != "undefined" AND 1==2) {
       let min_trust_level_setting = Discourse.SiteSettings.min_trust_level;
       let trustLevel = parseInt(Discourse.SiteSettings.min_trust_level);
       if (min_trust_level_setting > 0) {
