@@ -1,6 +1,6 @@
 # legacy-info
 
-### version 0.0.1
+### version 0.0.2
 
 ## Current Status
 
@@ -28,3 +28,8 @@ See: https://community.unix.com/t/paid-gig-requirements-for-discourse-plugin-for
 # ----+----------+-----------+-----------+----------------------------+----------------------------
 #  25 |   138187 | import_id | thread-33 | 2020-03-15 19:14:25.726726 | 2020-03-15 19:14:25.726726
 ```
+
+## Release Info
+
+- v0.0.1: 12 May 2020 Initial release
+- v0.0.2: 13 May 2020 Fixed `trust_level` undefined error when not logged in
