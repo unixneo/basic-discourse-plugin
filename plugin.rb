@@ -1,6 +1,6 @@
 # name: legacy-info
 # about: plugin to show migrated legacy thread id in topics
-# version: 0.0.1
+# version: 0.0.2
 # date: 12 March 2020
 # authors: Neo, spirobel
 # url: https://github.com/unixneo/basic-discourse-plugin
