@@ -1,4 +1,4 @@
 en:
   site_settings:
-    min_trust_level: "Minimum trust level for legacy forum info"
-    legacy_enabled: "Enable Legacy Thread Info"
+    legacy_info_enabled: "Enable legacy thread info plugin?"
+    min_trust_level: "Minimum trust level for legacy thread info"

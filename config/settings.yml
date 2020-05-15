@@ -1,4 +1,7 @@
 plugins:
+  legacy_info_enabled:
+    default: true
+    client: true
   min_trust_level:
     default: 4
     client: 4
