@@ -3,23 +3,27 @@ export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
     let currentUser = Discourse.User.current();
+    let enabledSetting = false;
     if (
       Discourse.User.current() == null &&
       Discourse.SiteSettings.enable_for_guests == false
     ) {
       return "";
     } else {
-      let min_trust_level_setting = Discourse.SiteSettings.min_trust_level;
-      let trustLevel = parseInt(Discourse.SiteSettings.min_trust_level);
-      if (min_trust_level_setting > 0) {
-        trustLevel = min_trust_level_setting;
-      } else {
-        trustLevel = 4;
+      if (Discourse.User.current() != null) {
+        let min_trust_level_setting = Discourse.SiteSettings.min_trust_level;
+        let trustLevel = parseInt(Discourse.SiteSettings.min_trust_level);
+        if (min_trust_level_setting > 0) {
+          trustLevel = min_trust_level_setting;
+        } else {
+          trustLevel = 4;
+        }
+        if (parseInt(currentUser.trust_level) >= parseInt(trustLevel)) {
+          enabledSetting = true;
+        }
       }
-      if (
-        parseInt(currentUser.trust_level) >= parseInt(trustLevel) ||
-        Discourse.SiteSettings.enable_for_guests
-      ) {
+
+      if (enabledSetting || Discourse.SiteSettings.enable_for_guests) {
         let legacyId = "";
         if (typeof cf !== "undefined") {
           let myArray = cf.split("-");
