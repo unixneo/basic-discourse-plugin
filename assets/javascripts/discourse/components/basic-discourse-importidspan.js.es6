@@ -3,7 +3,10 @@ export default Ember.Component.extend({
   @computed("topic.custom_fields.import_id")
   importId(cf) {
     let currentUser = Discourse.User.current();
-    if (Discourse.User.current() == null) {
+    if (
+      Discourse.User.current() == null &&
+      Discourse.SiteSettings.enable_for_guests == false
+    ) {
       return "";
     } else {
       let min_trust_level_setting = Discourse.SiteSettings.min_trust_level;
@@ -13,7 +16,10 @@ export default Ember.Component.extend({
       } else {
         trustLevel = 4;
       }
-      if (parseInt(currentUser.trust_level) >= parseInt(trustLevel)) {
+      if (
+        parseInt(currentUser.trust_level) >= parseInt(trustLevel) ||
+        Discourse.SiteSettings.enable_for_guests
+      ) {
         let legacyId = "";
         if (typeof cf !== "undefined") {
           let myArray = cf.split("-");
@@ -27,7 +33,7 @@ export default Ember.Component.extend({
         let link = "";
         if (legacyId > 1) {
           link =
-            '<span class="category-name import-id">Imported Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
+            '<span class="category-name import-id">Reference Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
             legacyId +
             '">' +
             legacyId +
