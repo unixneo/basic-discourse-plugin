@@ -6,5 +6,5 @@ plugins:
     default: 4
     client: 4
   enable_for_guests:
-    default: false
-    client: false
+    default: true
+    client: true
