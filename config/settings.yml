@@ -8,3 +8,6 @@ plugins:
   enable_for_guests:
     default: true
     client: true
+  enable_hide_canonical:
+    default: false
+    client: false
