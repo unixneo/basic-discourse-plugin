@@ -1,6 +1,6 @@
 # legacy-info
 
-### version 0.0.46
+### version 0.0.47
 
 ## Current Status
 
@@ -31,7 +31,7 @@ See: https://community.unix.com/t/paid-gig-requirements-for-discourse-plugin-for
 
 ## Release Info
 
-- v0.0.44: 31 July 2020 Added experimental site setting `enable_hide_canonical`
+- v0.0.45: 31 July 2020 Added experimental site setting `enable_hide_canonical`
 - v0.0.44: 31 July 2020 Added experimental code to remove canonical link when legacy exists.
 - v0.0.42: 31 July 2020 Added `enable_for_guests` setting.
 - v0.0.3: 15 May 2020 Fixed `legacy_info _enabled` setting

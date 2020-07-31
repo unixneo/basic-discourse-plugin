@@ -44,11 +44,13 @@ export default Ember.Component.extend({
             legacyId +
             "</a></span>";
           if (uC && Discourse.SiteSettings.enable_hide_canonical) {
+            uC.setAttribute("rel", "legacy");
             uC.style.display = "none";
             uC.disabled = true;
           }
         } else {
           if (uC && Discourse.SiteSettings.enable_hide_canonical) {
+            uC.setAttribute("rel", "canonical");
             uC.style.display = "inline";
             uC.disabled = false;
           }
