@@ -44,7 +44,7 @@ export default Ember.Component.extend({
             legacyId +
             "</a></span>";
           if (uC && Discourse.SiteSettings.enable_hide_canonical) {
-            uC.setAttribute("rel", "legacy");
+            uC.setAttribute("rel", "alternate");
             uC.style.display = "none";
             uC.disabled = true;
           }
