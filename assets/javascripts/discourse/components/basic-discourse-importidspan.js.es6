@@ -38,7 +38,7 @@ export default Ember.Component.extend({
         let uC = document.querySelectorAll("link[rel='canonical']")[0];
         if (legacyId > 1) {
           link =
-            '<span id="legacy" class="category-name import-id">Reference Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
+            '<span class="category-name import-id">Reference Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
             legacyId +
             '">' +
             legacyId +
