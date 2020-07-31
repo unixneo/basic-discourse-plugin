@@ -35,7 +35,7 @@ export default Ember.Component.extend({
           legacyId = 0;
         }
         let link = "";
-        let uC = "";
+        let uC = document.querySelectorAll("link[rel='canonical']")[0];
         if (legacyId > 1) {
           link =
             '<span class="category-name import-id">Reference Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
@@ -43,14 +43,15 @@ export default Ember.Component.extend({
             '">' +
             legacyId +
             "</a></span>";
-          uC = document.querySelectorAll("link[rel='canonical']")[0];
-
           if (uC) {
             uC.style.display = "none";
             uC.disabled = true;
-            uC.remove();
           }
         } else {
+          if (uC) {
+            uC.style.display = "block";
+            uC.disabled = false;
+          }
           //link = '<span class="category-name">Imported Thread ID: Not Found</span>';
           link = "";
         }
