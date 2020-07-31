@@ -10,4 +10,7 @@ plugins:
     client: true
   enable_hide_canonical:
     default: false
-    client: false
+    client: true
+  enable_hide_canonical_theme:
+    default: true
+    client: true

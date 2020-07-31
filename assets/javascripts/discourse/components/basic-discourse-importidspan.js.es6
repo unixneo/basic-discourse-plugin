@@ -49,7 +49,7 @@ export default Ember.Component.extend({
           }
         } else {
           if (uC && Discourse.SiteSettings.enable_hide_canonical) {
-            uC.style.display = "block";
+            uC.style.display = "inline";
             uC.disabled = false;
           }
           //link = '<span class="category-name">Imported Thread ID: Not Found</span>';
