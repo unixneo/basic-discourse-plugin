@@ -4,7 +4,6 @@ export default Ember.Component.extend({
   importId(cf) {
     let currentUser = Discourse.User.current();
     let enabledSetting = false;
-    Discourse.SiteSettings.legacy_found = false;
     if (
       Discourse.User.current() == null &&
       Discourse.SiteSettings.enable_for_guests == false
@@ -51,6 +50,7 @@ export default Ember.Component.extend({
             uC.disabled = true;
           }
         } else {
+          Discourse.SiteSettings.legacy_found = false;
           if (uC && Discourse.SiteSettings.enable_hide_canonical) {
             uC.setAttribute("rel", "canonical");
             uC.style.display = "inline";
