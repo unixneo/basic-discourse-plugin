@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   importId(cf) {
     let currentUser = Discourse.User.current();
     let enabledSetting = false;
-    Discourse.legacy_found = false;
+    Discourse.SiteSettings.legacy_found = false;
     if (
       Discourse.User.current() == null &&
       Discourse.SiteSettings.enable_for_guests == false
@@ -38,7 +38,7 @@ export default Ember.Component.extend({
         let link = "";
         let uC = document.querySelectorAll("link[rel='canonical']")[0];
         if (legacyId > 1) {
-          Discourse.legacy_found = true;
+          Discourse.SiteSettings.legacy_found = true;
           link =
             '<span class="category-name import-id">Reference Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
             legacyId +
