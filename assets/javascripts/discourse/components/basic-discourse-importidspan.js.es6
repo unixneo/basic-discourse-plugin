@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   importId(cf) {
     let currentUser = Discourse.User.current();
     let enabledSetting = false;
+    Discourse.SiteSettings.legacy_found = false;
     if (
       Discourse.User.current() == null &&
       Discourse.SiteSettings.enable_for_guests == false
@@ -37,7 +38,7 @@ export default Ember.Component.extend({
         let link = "";
         let uC = document.querySelectorAll("link[rel='canonical']")[0];
         if (legacyId > 1) {
-          //Discourse.SiteSettings.legacy_found = true;
+          Discourse.SiteSettings.legacy_found = true;
           link =
             '<span class="category-name import-id">Reference Thread ID: <a class="import-id-link" href="https://www.unix.com/showthread.php?t=' +
             legacyId +
@@ -50,7 +51,6 @@ export default Ember.Component.extend({
             uC.disabled = true;
           }
         } else {
-          //Discourse.SiteSettings.legacy_found = false;
           if (uC && Discourse.SiteSettings.enable_hide_canonical) {
             uC.setAttribute("rel", "canonical");
             uC.style.display = "inline";
@@ -62,7 +62,6 @@ export default Ember.Component.extend({
 
         return Ember.String.htmlSafe(link);
       } else {
-        //Discourse.SiteSettings.legacy_found = false;
         return "";
       }
     }
