@@ -14,3 +14,7 @@ plugins:
   enable_hide_canonical_theme:
     default: true
     client: true
+  legacy_found:
+    default: false
+    client: true
+    hidden: true

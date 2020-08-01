@@ -5,3 +5,4 @@ en:
     enable_for_guests: "Enable for unregistered users?"
     enable_hide_canonical: "Enable hiding canonical link element (experimental)?"
     enable_hide_canonical_theme: "Enable hiding canonical link element in theme (experimental)?"
+    legacy_found: "Legacy Found?"
